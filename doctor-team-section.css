@@ -1,0 +1,366 @@
+/* ===================================
+   DOCTOR TEAM SECTION - THEO HÌNH MẪU
+   =================================== */
+
+/* Section Container */
+.doctor-search-section {
+    background: #f0f4f8;
+    padding: 80px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Search Banner - Tiêu đề và mô tả */
+.search-banner {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.search-banner h2 {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    font-size: clamp(2.5rem, 5vw, 3.8rem);
+    background: linear-gradient(135deg, #0c4a6e 0%, #0369a1 30%, #0ea5e9 70%, #10b981 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 900;
+    margin-bottom: 25px;
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+    position: relative;
+    text-shadow: 0 4px 20px rgba(14, 165, 233, 0.15);
+    display: inline-block;
+}
+
+.search-banner h2::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 6px;
+    background: linear-gradient(90deg, #0ea5e9 0%, #10b981 50%, #06b6d4 100%);
+    border-radius: 3px;
+    box-shadow: 0 4px 12px rgba(14, 165, 233, 0.3);
+}
+
+.search-banner p {
+    font-size: 1.3rem;
+    color: var(--gray-600);
+    max-width: 700px;
+    margin: 20px auto 0;
+    line-height: 1.7;
+    font-weight: 500;
+    text-align: center;
+}
+
+/* Specialty Tabs - Nút chuyên khoa */
+.specialty-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+    padding: 0 20px;
+}
+
+.specialty-tab {
+    background: white;
+    color: #64748b;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.specialty-tab i {
+    font-size: 1rem;
+}
+
+.specialty-tab:hover {
+    background: #f8fafc;
+    border-color: #cbd5e1;
+    color: #475569;
+}
+
+.specialty-tab.active {
+    background: #0ea5e9;
+    color: white;
+    border-color: #0ea5e9;
+    box-shadow: 0 2px 6px rgba(14, 165, 233, 0.25);
+}
+
+.specialty-tab.active:hover {
+    background: #0284c7;
+    border-color: #0284c7;
+}
+
+/* Doctors Grid - Lưới bác sĩ */
+.doctors-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding: 0 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Doctor Card - Thẻ bác sĩ */
+.doctor-card {
+    background: white;
+    border-radius: 16px;
+    padding: 30px 25px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    overflow: visible;
+}
+
+.doctor-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Doctor Avatar - Ảnh đại diện */
+.doctor-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 18px;
+    border: 3px solid #bae6fd;
+    box-shadow: 0 2px 8px rgba(14, 165, 233, 0.15);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.doctor-card:hover .doctor-avatar {
+    border-color: #7dd3fc;
+    transform: scale(1.03);
+}
+
+.doctor-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Doctor Info - Thông tin bác sĩ */
+.doctor-info {
+    width: 100%;
+}
+
+.doctor-info h4 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 8px;
+}
+
+.doctor-info .specialty {
+    font-size: 0.95rem;
+    color: #64748b;
+    font-weight: 500;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.doctor-info .specialty i {
+    display: none;
+}
+
+.doctor-info .hospital,
+.doctor-info .experience {
+    font-size: 0.9rem;
+    color: #64748b;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.doctor-info .hospital i,
+.doctor-info .experience i {
+    display: none;
+}
+
+/* Rating - Đánh giá */
+.rating {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    margin: 10px 0;
+}
+
+.rating .stars {
+    color: #fbbf24;
+    font-size: 0.85rem;
+}
+
+.rating .score {
+    display: none;
+}
+
+.rating .reviews {
+    color: #64748b;
+    font-size: 0.85rem;
+    margin-left: 3px;
+}
+
+/* Price - Giá khám */
+.doctor-info .price {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin: 12px 0;
+    display: block;
+}
+
+.doctor-info .price i {
+    display: none;
+}
+
+/* Availability - Trạng thái */
+.availability {
+    display: none;
+}
+
+/* Doctor Actions - Nút hành động */
+.doctor-actions {
+    display: flex;
+    gap: 12px;
+    width: 100%;
+    margin-top: 18px;
+}
+
+.btn-profile,
+.btn-book {
+    flex: 1;
+    padding: 11px 20px;
+    border-radius: 25px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: none;
+}
+
+.btn-profile {
+    background: #0ea5e9;
+    color: white;
+}
+
+.btn-profile:hover {
+    background: #0284c7;
+    transform: translateY(-1px);
+}
+
+.btn-book {
+    background: #10b981;
+    color: white;
+}
+
+.btn-book:hover {
+    background: #059669;
+    transform: translateY(-1px);
+}
+
+.btn-profile i,
+.btn-book i {
+    display: none;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .doctors-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+}
+
+@media (max-width: 768px) {
+    .doctor-search-section {
+        padding: 60px 0;
+    }
+    
+    .search-banner h2 {
+        font-size: 2rem;
+    }
+    
+    .search-banner p {
+        font-size: 1rem;
+    }
+    
+    .specialty-tabs {
+        gap: 10px;
+    }
+    
+    .specialty-tab {
+        padding: 10px 18px;
+        font-size: 0.9rem;
+    }
+    
+    .doctors-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 0 15px;
+    }
+    
+    .doctor-card {
+        padding: 25px;
+    }
+    
+    .doctor-avatar {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .doctor-info h4 {
+        font-size: 1.2rem;
+    }
+    
+    .doctor-actions {
+        flex-direction: column;
+    }
+    
+    .btn-profile,
+    .btn-book {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .search-banner h2 {
+        font-size: 1.75rem;
+    }
+    
+    .specialty-tab {
+        padding: 8px 15px;
+        font-size: 0.85rem;
+    }
+    
+    .doctor-avatar {
+        width: 90px;
+        height: 90px;
+    }
+    
+    .doctor-info h4 {
+        font-size: 1.1rem;
+    }
+}

@@ -1,0 +1,84 @@
+/* Fix Overlay Click Issues - Ensure page is always clickable */
+
+/* Ensure body and html are always interactive */
+body, html {
+    pointer-events: auto !important;
+    overflow-x: hidden !important;
+}
+
+/* Hide any stuck modal backdrops */
+.modal-backdrop {
+    display: none !important;
+    pointer-events: none !important;
+}
+
+/* Ensure modal-open class doesn't block interactions when modal is closed */
+body:not(.modal-open) {
+    overflow: auto !important;
+    padding-right: 0 !important;
+}
+
+/* Ensure all interactive elements are clickable */
+button, a, input, select, textarea, 
+.btn, .nav-link, .clickable,
+[role="button"], [onclick] {
+    pointer-events: auto !important;
+    position: relative;
+    z-index: 1;
+}
+
+/* Ensure form elements are always accessible */
+form, .form-group, .form-control {
+    pointer-events: auto !important;
+}
+
+/* Ensure tables are clickable */
+table, tr, td, th {
+    pointer-events: auto !important;
+}
+
+/* Ensure sidebar and main content are clickable */
+.sidebar, .main-content, .container-fluid, .container {
+    pointer-events: auto !important;
+}
+
+/* Fix for any pseudo-elements that might block clicks */
+*::before, *::after {
+    pointer-events: none !important;
+}
+
+/* Exception: Allow pseudo-elements on interactive elements */
+button::before, button::after,
+a::before, a::after,
+.btn::before, .btn::after {
+    pointer-events: none !important;
+}
+
+/* Ensure cards and panels are clickable */
+.card, .panel, .box, .widget {
+    pointer-events: auto !important;
+}
+
+/* Fix for Bootstrap modal issues */
+.modal.show {
+    pointer-events: auto !important;
+}
+
+.modal:not(.show) {
+    pointer-events: none !important;
+}
+
+/* Ensure dropdown menus work */
+.dropdown-menu {
+    pointer-events: auto !important;
+}
+
+/* Fix for any overlay that might be stuck */
+[style*="position: fixed"]:not(.modal):not(.modal-dialog):not(.toast):not(.alert) {
+    pointer-events: none !important;
+}
+
+/* But allow modals and toasts to be interactive */
+.modal, .modal-dialog, .modal-content, .toast, .alert {
+    pointer-events: auto !important;
+}

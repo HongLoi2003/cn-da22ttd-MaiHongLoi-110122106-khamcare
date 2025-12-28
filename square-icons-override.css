@@ -1,0 +1,31 @@
+/* Square Icons Override - Consistent icon styling */
+
+/* Make icons have consistent square appearance */
+.icon-square {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
+}
+
+.icon-square i {
+    font-size: 1.2rem;
+}
+
+/* Sidebar icons */
+.sidebar .nav-link i {
+    width: 24px;
+    text-align: center;
+}
+
+/* Button icons */
+.btn i {
+    margin-right: 0.5rem;
+}
+
+.btn-icon-only i {
+    margin-right: 0;
+}

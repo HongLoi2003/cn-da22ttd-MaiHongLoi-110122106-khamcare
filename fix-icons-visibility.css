@@ -1,0 +1,32 @@
+/* Fix Icons Visibility - Ensure Font Awesome icons are visible */
+
+/* Ensure Font Awesome icons are always visible */
+i.fa, i.fas, i.far, i.fab, i.fal, i.fad,
+.fa, .fas, .far, .fab, .fal, .fad {
+    font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands", "Font Awesome 5 Free", "Font Awesome 5 Brands", "FontAwesome" !important;
+    display: inline-block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    font-style: normal !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+i.fas, .fas {
+    font-weight: 900 !important;
+}
+
+i.far, .far {
+    font-weight: 400 !important;
+}
+
+i.fab, .fab {
+    font-family: "Font Awesome 6 Brands", "Font Awesome 5 Brands" !important;
+    font-weight: 400 !important;
+}
+
+/* Ensure icons in buttons are visible */
+.btn i, button i, a i {
+    visibility: visible !important;
+    opacity: 1 !important;
+}

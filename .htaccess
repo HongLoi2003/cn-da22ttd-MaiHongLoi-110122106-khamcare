@@ -1,0 +1,36 @@
+# Force MIME types for images
+AddType image/png .png
+AddType image/jpeg .jpg
+AddType image/jpeg .jpeg
+AddType image/gif .gif
+AddType image/webp .webp
+
+# Handle double extensions (common issue)
+<FilesMatch "\.png\.png$">
+    ForceType image/png
+</FilesMatch>
+
+<FilesMatch "\.jpg\.jpg$">
+    ForceType image/jpeg
+</FilesMatch>
+
+<FilesMatch "\.png\.jpg$">
+    ForceType image/jpeg
+</FilesMatch>
+
+<FilesMatch "\.png\.webp$">
+    ForceType image/webp
+</FilesMatch>
+
+# Enable image serving with proper headers
+<FilesMatch "\.(png|jpg|jpeg|gif|webp)$">
+    Header set Cache-Control "public, max-age=3600"
+    Header set Access-Control-Allow-Origin "*"
+</FilesMatch>
+
+# Disable caching for debugging (temporary)
+<FilesMatch "view_doctor\.php$">
+    Header set Cache-Control "no-cache, no-store, must-revalidate"
+    Header set Pragma "no-cache"
+    Header set Expires "0"
+</FilesMatch>

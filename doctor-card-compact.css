@@ -1,0 +1,353 @@
+/* Compact Doctor Card Styles - Smaller & Centered */
+
+/* Container for doctor cards - Center alignment */
+.doctors-grid,
+.doctor-team-grid,
+.team-grid {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: stretch !important;
+    gap: 24px !important;
+    flex-wrap: wrap !important;
+    max-width: 1400px !important;
+    margin: 0 auto !important;
+    padding: 20px !important;
+}
+
+/* Compact Doctor Card */
+.doctor-card {
+    background: linear-gradient(135deg, #ffffff 0%, #fafbfc 100%) !important;
+    border-radius: 16px !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04), 0 4px 16px rgba(14, 165, 233, 0.06) !important;
+    padding: 24px 20px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+    border: 1px solid rgba(14, 165, 233, 0.08) !important;
+    position: relative !important;
+    overflow: hidden !important;
+    max-width: 280px !important;
+    width: 100% !important;
+    flex: 0 1 280px !important;
+}
+
+/* Subtle gradient border on top */
+.doctor-card::before {
+    content: '' !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    height: 3px !important;
+    background: linear-gradient(90deg, #0ea5e9 0%, #06b6d4 50%, #10b981 100%) !important;
+    opacity: 0 !important;
+    transition: opacity 0.35s ease !important;
+}
+
+.doctor-card:hover::before {
+    opacity: 1 !important;
+}
+
+/* Smooth hover effect */
+.doctor-card:hover {
+    transform: translateY(-8px) !important;
+    box-shadow: 0 6px 24px rgba(14, 165, 233, 0.12), 0 12px 36px rgba(14, 165, 233, 0.08) !important;
+    border-color: rgba(14, 165, 233, 0.2) !important;
+    background: linear-gradient(135deg, #ffffff 0%, #f0f9ff 100%) !important;
+}
+
+/* Compact Avatar */
+.doctor-card .doctor-avatar,
+.doctor-avatar {
+    width: 90px !important;
+    height: 90px !important;
+    border-radius: 14px !important;
+    overflow: hidden !important;
+    margin: 0 auto 16px !important;
+    border: 3px solid transparent !important;
+    background: linear-gradient(white, white) padding-box,
+                linear-gradient(135deg, #0ea5e9, #06b6d4) border-box !important;
+    box-shadow: 0 4px 16px rgba(14, 165, 233, 0.12) !important;
+    transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+    position: relative !important;
+}
+
+.doctor-card:hover .doctor-avatar {
+    transform: scale(1.05) !important;
+    box-shadow: 0 8px 24px rgba(14, 165, 233, 0.2) !important;
+}
+
+.doctor-avatar img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    border-radius: 11px !important;
+    transition: transform 0.35s ease !important;
+}
+
+.doctor-card:hover .doctor-avatar img {
+    transform: scale(1.08) !important;
+}
+
+/* Compact Name */
+.doctor-card h4,
+.doctor-info h4,
+.doctor-name {
+    font-size: 1.05rem !important;
+    font-weight: 700 !important;
+    color: #0f172a !important;
+    margin: 0 0 8px 0 !important;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif !important;
+    letter-spacing: -0.01em !important;
+    transition: all 0.3s ease !important;
+    line-height: 1.3 !important;
+}
+
+.doctor-card:hover h4 {
+    color: #0ea5e9 !important;
+    transform: translateY(-1px) !important;
+}
+
+/* Compact Specialty Badge */
+.doctor-specialty,
+.specialty,
+.doctor-info .specialty {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 4px !important;
+    background: linear-gradient(135deg, #e0f2fe 0%, #dbeafe 100%) !important;
+    color: #0369a1 !important;
+    padding: 4px 12px !important;
+    border-radius: 20px !important;
+    font-size: 0.8rem !important;
+    font-weight: 600 !important;
+    margin: 0 0 12px 0 !important;
+    border: 1px solid rgba(3, 105, 161, 0.08) !important;
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+}
+
+.doctor-card:hover .doctor-specialty,
+.doctor-card:hover .specialty {
+    background: linear-gradient(135deg, #0ea5e9 0%, #06b6d4 100%) !important;
+    color: white !important;
+    transform: scale(1.05) !important;
+    box-shadow: 0 2px 8px rgba(14, 165, 233, 0.15) !important;
+}
+
+/* Compact Rating */
+.doctor-rating,
+.rating {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 3px !important;
+    margin: 6px 0 !important;
+    font-size: 0.85rem !important;
+    color: #fbbf24 !important;
+}
+
+.rating-text {
+    color: #64748b !important;
+    font-size: 0.8rem !important;
+    margin-left: 3px !important;
+}
+
+/* Compact Location */
+.doctor-location,
+.location {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 4px !important;
+    color: #64748b !important;
+    font-size: 0.8rem !important;
+    margin: 4px 0 !important;
+}
+
+.doctor-location i,
+.location i {
+    color: #0ea5e9 !important;
+    font-size: 0.75rem !important;
+}
+
+/* Compact Availability Badge */
+.availability-badge,
+.doctor-availability {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 4px !important;
+    background: #d1fae5 !important;
+    color: #059669 !important;
+    padding: 3px 10px !important;
+    border-radius: 16px !important;
+    font-size: 0.75rem !important;
+    font-weight: 600 !important;
+    margin: 6px 0 !important;
+}
+
+/* Compact Price */
+.doctor-price,
+.price {
+    font-size: 1.1rem !important;
+    font-weight: 700 !important;
+    color: #0ea5e9 !important;
+    margin: 10px 0 !important;
+}
+
+/* Compact Action Buttons */
+.doctor-actions,
+.doctor-card-actions {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 8px !important;
+    width: 100% !important;
+    margin-top: 16px !important;
+}
+
+.btn-view-profile,
+.btn-xem-ho-so {
+    width: 100% !important;
+    padding: 10px 16px !important;
+    background: white !important;
+    color: #0ea5e9 !important;
+    border: 2px solid #0ea5e9 !important;
+    border-radius: 10px !important;
+    font-weight: 600 !important;
+    font-size: 0.85rem !important;
+    cursor: pointer !important;
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+    text-decoration: none !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 6px !important;
+    position: relative !important;
+    overflow: hidden !important;
+}
+
+.btn-view-profile::before,
+.btn-xem-ho-so::before {
+    content: '' !important;
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    width: 0 !important;
+    height: 0 !important;
+    border-radius: 50% !important;
+    background: #0ea5e9 !important;
+    transform: translate(-50%, -50%) !important;
+    transition: width 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), height 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+}
+
+.btn-view-profile:hover::before,
+.btn-xem-ho-so:hover::before {
+    width: 300px !important;
+    height: 300px !important;
+}
+
+.btn-view-profile:hover,
+.btn-xem-ho-so:hover {
+    color: white !important;
+    border-color: #0284c7 !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 4px 16px rgba(14, 165, 233, 0.25) !important;
+}
+
+.btn-view-profile span,
+.btn-xem-ho-so span,
+.btn-view-profile i,
+.btn-xem-ho-so i {
+    position: relative !important;
+    z-index: 1 !important;
+}
+
+.btn-book-now,
+.btn-dat-ngay {
+    width: 100% !important;
+    padding: 10px 16px !important;
+    background: linear-gradient(135deg, #0ea5e9 0%, #06b6d4 100%) !important;
+    color: white !important;
+    border: 2px solid transparent !important;
+    border-radius: 10px !important;
+    font-weight: 600 !important;
+    font-size: 0.85rem !important;
+    cursor: pointer !important;
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+    text-decoration: none !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 6px !important;
+    position: relative !important;
+    overflow: hidden !important;
+    box-shadow: 0 3px 10px rgba(14, 165, 233, 0.18) !important;
+}
+
+.btn-book-now::before,
+.btn-dat-ngay::before {
+    content: '' !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: -100% !important;
+    width: 100% !important;
+    height: 100% !important;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.25), transparent) !important;
+    transition: left 0.5s ease !important;
+}
+
+.btn-book-now:hover::before,
+.btn-dat-ngay:hover::before {
+    left: 100% !important;
+}
+
+.btn-book-now:hover,
+.btn-dat-ngay:hover {
+    background: linear-gradient(135deg, #0284c7 0%, #0891b2 100%) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 20px rgba(14, 165, 233, 0.3) !important;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+    .doctor-card {
+        max-width: 260px !important;
+        flex: 0 1 260px !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .doctors-grid,
+    .doctor-team-grid,
+    .team-grid {
+        gap: 16px !important;
+        padding: 16px !important;
+    }
+    
+    .doctor-card {
+        padding: 20px 16px !important;
+        max-width: 100% !important;
+        flex: 1 1 100% !important;
+    }
+    
+    .doctor-avatar {
+        width: 80px !important;
+        height: 80px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .doctor-card {
+        padding: 16px 12px !important;
+    }
+    
+    .doctor-avatar {
+        width: 70px !important;
+        height: 70px !important;
+    }
+    
+    .doctor-card h4 {
+        font-size: 0.95rem !important;
+    }
+}

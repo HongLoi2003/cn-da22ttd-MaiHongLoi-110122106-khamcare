@@ -1,0 +1,139 @@
+/* Global Font Override - Sans Serif for All KhamCare Pages */
+/* This file overrides all font-family declarations to use system Sans Serif fonts */
+
+body,
+html {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif !important;
+}
+
+/* Override all heading fonts */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif !important;
+}
+
+/* Override all common elements */
+p,
+span,
+div,
+a,
+li,
+ul,
+ol,
+table,
+th,
+td,
+label,
+.logo,
+.logo span,
+.brand-info,
+.brand-info h2,
+.section-title,
+.hero-content,
+.hero-content h1,
+.doctor-info,
+.doctor-info h3,
+.doctor-info h4,
+.specialty-card,
+.specialty-card h4,
+.nav-menu,
+.nav-menu a,
+.search-title,
+.results-title,
+.suggestions-header h3,
+.suggestions-title,
+button,
+input,
+select,
+textarea,
+.btn,
+.form-control,
+.form-label,
+.footer-brand h2,
+.footer-column h3,
+.popup-content,
+.modal-content,
+.card-title,
+.card-text,
+.alert,
+.badge,
+.label {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif !important;
+}
+
+/* Override Poppins and Inter specifically */
+[style*="font-family: 'Poppins'"],
+[style*="font-family: 'Inter'"],
+[style*='font-family: "Poppins"'],
+[style*='font-family: "Inter"'] {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif !important;
+}
+
+/* IMPORTANT: Restore Font Awesome icons - must be at the end with high specificity */
+i.fa,
+i.fas,
+i.far,
+i.fab,
+i.fal,
+i.fad,
+i.fa-solid,
+i.fa-regular,
+i.fa-brands,
+i.fa-light,
+i.fa-duotone,
+span.fa,
+span.fas,
+span.far,
+span.fab,
+span.fal,
+span.fad,
+.fa,
+.fas,
+.far,
+.fab,
+.fal,
+.fad,
+.fa-solid,
+.fa-regular,
+.fa-brands,
+.fa-light,
+.fa-duotone {
+    font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands", "Font Awesome 5 Free", "Font Awesome 5 Brands", "FontAwesome" !important;
+}
+
+/* Ensure Font Awesome solid icons have correct font-weight */
+i.fas,
+i.fa-solid,
+span.fas,
+span.fa-solid,
+.fas,
+.fa-solid {
+    font-family: "Font Awesome 6 Free", "Font Awesome 5 Free", "FontAwesome" !important;
+    font-weight: 900 !important;
+}
+
+/* Ensure Font Awesome regular icons have correct font-weight */
+i.far,
+i.fa-regular,
+span.far,
+span.fa-regular,
+.far,
+.fa-regular {
+    font-family: "Font Awesome 6 Free", "Font Awesome 5 Free", "FontAwesome" !important;
+    font-weight: 400 !important;
+}
+
+/* Ensure Font Awesome brands icons have correct font-weight */
+i.fab,
+i.fa-brands,
+span.fab,
+span.fa-brands,
+.fab,
+.fa-brands {
+    font-family: "Font Awesome 6 Brands", "Font Awesome 5 Brands" !important;
+    font-weight: 400 !important;
+}
